@@ -29,6 +29,8 @@ public class ConsoleInputOutputLecture {
 
         //more java printf formatting options available
 
+        //can take out the System.in and put in a string w multiple inputs seperated by spaces and its like hard coding input form the keyboard
+        //Scanner input = new Scanner("4 5");
         Scanner input = new Scanner(System.in);
         //data type: scanner
         //input is only associated w a scanner
@@ -71,6 +73,11 @@ public class ConsoleInputOutputLecture {
 
         input.close();
         //must always clean up after yourself by using the close method bc it may be using resources, read documentation to see when and how youre supposed to close a new function to avoid a memory leak
+
+
+
+
+        //!!!!!!! dont use doubles for money bc of the issue storing decimals creates error
     }
 }
 

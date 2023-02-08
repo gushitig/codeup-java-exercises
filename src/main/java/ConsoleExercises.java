@@ -5,7 +5,8 @@ public class ConsoleExercises {
 
         // 1.
         double pi = 3.14159;
-        System.out.printf("The value of pi is approximately: %.2f\n", pi);
+        System.out.printf("The value of pi is approximately: %.2f%n", pi);
+        System.out.format("The value of pi is approximately: %.2f%n", pi);
 
         //Explore the Scanner Class
         Scanner input = new Scanner(System.in);
@@ -48,10 +49,19 @@ public class ConsoleExercises {
         double area = Double.parseDouble(width) * Double.parseDouble(length);
         double perimeter = (Double.parseDouble(width) * 2) + (2 * Double.parseDouble(length));
 
-        System.out.printf("The volume is : %.2f cubed ft, the area is: %.2f sq ft, and the perimeter is: %.2f feet", volume, area, perimeter);
+        System.out.printf("The volume is : %.2f cubed ft, the area is: %.2f sq ft, and the perimeter is: %.2f feet%n", volume, area, perimeter);
+
+        //can do a multiline like this in java
+        System.out.printf("""
+        The volume is : %.2f cubed ft, 
+        the area is: %.2f sq ft, and 
+        the perimeter is: %.2f feet%n"""
+        , volume, area, perimeter);
 
         //BONUS
-        //added volume, but dont know what useDelimiter does
+        //added volume
+        // useDelimiter tells you what seperates the tokens - helpful on non keyboard input
+        //double length = input.nextDouble(); can be used to get multiple inputs at the same time on a line
 
 
 
