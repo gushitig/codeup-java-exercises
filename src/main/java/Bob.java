@@ -31,5 +31,7 @@ public class Bob {
 
         } while(!done);
 
+        input.close();
+
     }
 }

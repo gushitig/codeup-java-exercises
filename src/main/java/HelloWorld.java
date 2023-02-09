@@ -1,5 +1,3 @@
-package hello;
-
 public class HelloWorld {
     public static void main(String[] args) {
         //the program starts here
@@ -62,7 +60,7 @@ hello % javac HelloWorld.java
 Ls -la
 
 Running our program we dont include the file type
-java hello.HelloWorld
+java HelloWorld
 package name . class name
 Won’t ever really do this
 
