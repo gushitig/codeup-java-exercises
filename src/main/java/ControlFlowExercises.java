@@ -71,6 +71,8 @@ public class ControlFlowExercises {
             //prompt user to enter a grade
             System.out.println("Enter a numerical grade: ");
             grade = input.nextInt();
+            //input.next();
+            //clears the newline out of the buffer45
             System.out.println("You entered " + grade);
             //display the letter grade
             if (grade >= 88 ) {
