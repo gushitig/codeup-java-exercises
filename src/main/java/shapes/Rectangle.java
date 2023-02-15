@@ -11,12 +11,33 @@ public class Rectangle {
     }
 
     public double getArea() {
+        System.out.println("rect");
         return length * width;
     }
 
     public double getPerimeter() {
+        System.out.println("rect");
         return (2 * length) + (2 * width);
     }
 
 
+
+
+
+    //accessors
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
 }
