@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-    //add
+    // 1a. add
     public static int add(int num1, int num2) {
         return num1 + num2;
     }
-    //subtract
+    // 1a. subtract
     public static int subtract(int num1, int num2) {
         return num1 - num2;
     }
-    //multiply
+    // 1a. multiply
     public static int multiply(int num1, int num2) {
         return num1 * num2;
     }
-    //divide
+    // 1a. divide
     public static int divide(int num1, int num2) {
         if (num2 == 0) {
             System.out.println("Cannot divide by zero.");
@@ -55,6 +55,7 @@ public class MethodsExercises {
             }
     }
 
+    // 2.
     public static int getInteger(int min, int max) {
         Scanner input = new Scanner(System.in);
 
@@ -65,11 +66,13 @@ public class MethodsExercises {
             //System.out.print(userInput);
             return userInput;
         } else {
+            System.out.println("Number not within range.");
             return getInteger(min, max);
         }
 
     }
 
+    // 3.
     public static long factorial(Scanner input) {
         System.out.println("Factorial: Enter a number between 1 and 15: ");
         int userInput = input.nextInt();
@@ -87,7 +90,15 @@ public class MethodsExercises {
 
     }
 
+    // 3. bonus
+    public static long factorialRecursion(int num){
+        if(num == 1) {
+            return 1;
+        }
+        return factorialRecursion(num-1)* num;
+    }
 
+    // 4.
     public static int roll(int num) {
         // define the range
         int max = num;
@@ -112,6 +123,13 @@ public class MethodsExercises {
             return rollTwoDice(input);
         }
 
+    }
+
+    // 4.class example
+    public static int dice (int n) {
+        double diceRoll = Math.floor(Math.random() * (n + 1));
+        int intRoll = (int)diceRoll;
+        return intRoll;
     }
 
 
@@ -164,7 +182,6 @@ public class MethodsExercises {
 
 
         // 4.
-        //Scanner inputDie = new Scanner(System.in);
         int sides = rollTwoDice(input);
 
         int d1 = roll(sides);
@@ -186,6 +203,25 @@ public class MethodsExercises {
         } while(!done2);
 
         input.close();
+
+        // 4.class example
+/*
+        System.out.println("Welcome to my dice game.");
+        String userRes;
+        do {
+            System.out.println("How manby side wouls you like the dice to have: ");
+            int userInput = input.nextInt();
+            System.out.println("Roll the dice? (y/n) ");
+            String userChoice = input.next();
+            if(userChoice.equalsIgnoreCase("y")) {
+                System.out.println("First result: " + dice(userInput));
+                System.out.println("Second result: " + dice(userInput));
+            }
+            System.out.println("Would you liek to continue? (y/n) ");
+            userRes - input.next();
+        } while(userRes.equalsIgnoreCase("y"));
+
+*/
 
 
 
