@@ -24,7 +24,7 @@ public class Input {
 
     public boolean yesNo() {
         System.out.print("[y/n]?: ");
-        String choice = scannerInput.nextLine(); //calss exmaple = getString(); called encapsulation but it makes things clean and simple
+        String choice = scannerInput.nextLine(); //calss example = getString(); called encapsulation but it makes things clean and simple
         if (choice.equalsIgnoreCase("y")) {
             return true;
         } else if (choice.equalsIgnoreCase("yes")){
@@ -44,11 +44,37 @@ public class Input {
 
 
     public int getInt() {
-        int userNum = scannerInput.nextInt();
+        //int userNum = scannerInput.nextInt()
+        int userNum = 0;
+
+        try {
+            String s = getString("Enter an integer: ");
+            userNum = Integer.valueOf(s);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Not a valid integer. Please try again.");
+            userNum = getInt();
+        }
         return userNum;
     }
 
+
+
     public int getInt(int min, int max) {
+
+        int userNum = scannerInput.nextInt();
+
+        if (userNum >= min && userNum <= max) {
+            return userNum;
+        } else {
+            System.out.printf("Enter a number between %d and %d: ", min, max);
+            return getInt(min, max);
+        }
+    }
+
+    public int getInt(int min, int max, String prompt) {
+
+        System.out.println(prompt);
 
         int userNum = scannerInput.nextInt();
 
@@ -83,9 +109,54 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.printf("Enter a decimal: ");
-        double userNum = scannerInput.nextDouble();
+        double userNum = 0;
+
+        try {
+            String s = getString("Enter a decimal: ");
+            userNum = Double.valueOf(s);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Not a valid decimal. Please try again.");
+            userNum = getDouble();
+        }
         return userNum;
+
+
+
+    }
+
+
+
+    public int getBinary() {
+        int userNum = 0;
+
+        try {
+            String s = getString("Enter a binary number: ");
+            userNum = Integer.valueOf(s, 2);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Not a valid binary number. Please try again.");
+            userNum = getBinary();
+        }
+        return userNum;
+
+
+    }
+
+    public int getHex() {
+        int userNum = 0;
+
+        try {
+            String s = getString("Enter a binary number: ");
+            userNum = Integer.valueOf(s, 16);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Not a valid hex number. Please try again.");
+            userNum = getHex();
+        }
+        return userNum;
+
+
     }
 
 

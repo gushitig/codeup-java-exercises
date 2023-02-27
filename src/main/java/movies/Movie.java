@@ -14,6 +14,7 @@ public class Movie {
         this.category = category;
     }
 
+    //accessors
     public String getName() {
         return name;
     }
