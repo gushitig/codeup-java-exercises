@@ -9,6 +9,8 @@ public class MavenExercise {
 
         String response = "";
 
+        //simplified String response = input.getString("Enter something: ");
+
         System.out.println("Enter something: ");
 
         response = input.nextLine();

@@ -5,12 +5,12 @@ import java.util.Arrays;
 
 public class Student {
 
-    private Arrays names;
+    private String name;
     private ArrayList<Integer> grades;
 
     // returns the student's name
     public String getName() {
-        return names.toString();
+        return name;
     }
 
     // adds the given grade to the grades property
@@ -20,19 +20,20 @@ public class Student {
 
     // returns the average of the students grades
     public double getGradeAverage(){
-        int total = 0;
+        double total = 0;
         for (int i = 0; i < grades.size(); i++) {
             total = total + grades.get(i);
         }
-        double avg = ((double) total) / grades.size();
+        double avg = total / grades.size();
         return avg;
     }
 
-
-
     //constructor
-    public Student(Arrays names, ArrayList<Integer> grades) {
-        this.names = names;
+    public Student(String name) {
+        this.name = name;
         this.grades = new ArrayList<>();
     }
+
+
+
 }
